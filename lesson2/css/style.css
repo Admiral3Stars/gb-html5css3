@@ -81,6 +81,7 @@
   }
 
   .normal-header-h2{
+    margin-top: 0px;
     font-size: 30px;
     line-height: 36px;
     font-weight: 400;
@@ -116,7 +117,6 @@
   }
 
   .dignity-header{
-    margin-top: 0;
     text-align: center;
   }
   .dignity-list{
@@ -151,7 +151,6 @@
   }
 
   .screenshots-header{
-    margin-top: 0;
     text-align: center;
   }
 
