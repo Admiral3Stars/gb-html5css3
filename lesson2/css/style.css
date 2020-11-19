@@ -62,7 +62,7 @@
   .page-header-img {
     display: block;
     width: 470px;
-    height: 215px;
+    min-height: 215px;
     background-color: #fff;
     float: right;
   } 
@@ -105,7 +105,7 @@
     display: block;
     background-color: #445161;
     width: 430px;
-    height: 245px;
+    min-height: 245px;
   } 
 
   .dignity{
@@ -171,7 +171,7 @@
     display: block;
     background-color: #445161;
     width: 200px;
-    height: 150px;
+    min-height: 150px;
   } 
 
   .screenshots-figure-figcaption{
@@ -191,7 +191,7 @@
 }
 
 .normal-header-h3{
-    ont-size: 24px;
+    font-size: 24px;
     line-height: 30px;
     font-weight: 400;
     color: #445161;
