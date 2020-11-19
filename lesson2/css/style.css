@@ -22,7 +22,7 @@
   }
   
   .page-header-wrp {
-    width: 400px;
+    max-width: 660px;
   }
   
   .page-header-title {
@@ -61,8 +61,8 @@
   
   .page-header-img {
     display: block;
-    width: 400px;
-    height: 200px;
+    width: 470px;
+    height: 215px;
     background-color: #fff;
     float: right;
   } 
@@ -76,7 +76,22 @@
   }
 
   .about-product-article{
-      width: 660px;
+    max-width: 660px;
+    color: #445161;
+  }
+
+  .normal-header-h2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #445161;
+  }
+
+  .normal-text{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333333;
   }
 
   .about-product-article-text{
@@ -89,7 +104,95 @@
   .about-product-img {
     display: block;
     background-color: #445161;
-    float: right;
     width: 430px;
     height: 245px;
   } 
+
+  .dignity{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+  }
+
+  .dignity-header{
+    margin-top: 0;
+    text-align: center;
+  }
+  .dignity-list{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  .dignity-list-item{
+    position: relative;
+    max-width: 530px;
+    list-style: none;
+  }
+  .dignity-list-item:before {
+    content: "+";
+    background-color: #445161;
+    padding: 6px;
+    font-size: 36px;
+    line-height: 0.6;
+    color: white;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 6px;
+    left: -45px;
+  }
+
+  .screenshots{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  .screenshots-header{
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .screenshots-figure{
+    margin: 0;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* лучше задать отдельный класс, но я захотел поиграться псевдоэлементами */
+  .screenshots-figure:nth-child(2), .screenshots-figure:nth-child(3){
+    margin-bottom: 30px;
+  }
+
+  .screenshots-figure-img {
+    display: block;
+    background-color: #445161;
+    width: 200px;
+    height: 150px;
+  } 
+
+  .screenshots-figure-figcaption{
+    max-width: 355px;
+    margin: 0 15px;
+  }
+
+  .screenshots:after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.screenshots-figure-figcaption-header{
+    margin: 0;
+}
+
+.normal-header-h3{
+    ont-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #445161;
+  }
