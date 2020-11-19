@@ -1,0 +1,95 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    border: 3px solid red;
+    box-sizing: border-box;
+    font-family: arial;
+  }
+  
+  .page-header {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: #445161;
+    color: #fff;
+  }
+  
+  .page-header-wrp {
+    width: 400px;
+  }
+  
+  .page-header-title {
+    margin: 0 0 20px 0;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 400;
+    
+  }
+  
+  .page-header-list {
+    padding: 0 0 0 30px;
+    margin: 0 0 0 0;
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 400;
+    list-style-type: none;
+  }
+  
+  .page-header-list-item {
+    position: relative;
+  }
+  
+  .page-header-list-item:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid; */
+    position: absolute;
+    top: 7px;
+    left: -30px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/1200px-Flat_tick_icon.svg.png');
+    background-size: cover;
+  }
+  
+  .page-header-img {
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    float: right;
+  } 
+
+  .about-product{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-product-article{
+      width: 660px;
+  }
+
+  .about-product-article-text{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .about-product-img {
+    display: block;
+    background-color: #445161;
+    float: right;
+    width: 430px;
+    height: 245px;
+  } 
