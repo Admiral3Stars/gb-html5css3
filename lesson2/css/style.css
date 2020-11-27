@@ -81,6 +81,10 @@
   }
 
   .normal-header-h2{
+<<<<<<< HEAD
+=======
+    margin-top: 0px;
+>>>>>>> origin/lesson2
     font-size: 30px;
     line-height: 36px;
     font-weight: 400;
@@ -116,7 +120,10 @@
   }
 
   .dignity-header{
+<<<<<<< HEAD
     margin-top: 0;
+=======
+>>>>>>> origin/lesson2
     text-align: center;
   }
   .dignity-list{
@@ -151,7 +158,10 @@
   }
 
   .screenshots-header{
+<<<<<<< HEAD
     margin-top: 0;
+=======
+>>>>>>> origin/lesson2
     text-align: center;
   }
 
