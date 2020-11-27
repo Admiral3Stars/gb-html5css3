@@ -74,7 +74,6 @@
 						totam, dolore minus inventore.</li>
 				</ul>
 			</section>
-			<!-- Без обёртывания в дополнительный div я не смогу тут сделать flexbox, вероятно не хватает знаний, так как использую эту технологию впервые. Да и вообще какая-то жопа с section ниже. Я просто убеждён, что оно как-то проще должно делаться... -->
 			<section class="screenshots">
 				<h2 class="screenshots-header normal-header-h2">Screenshots</h2>
 				<figure class="screenshots-figure">
@@ -121,6 +120,94 @@
 							perferendis nemo debitis dolor.</p>
 					</figcaption>
 				</figure>
+			</section>
+
+			<section class="reviews">
+				<h2 class="reviews-header normal-header-h2">Reviews</h2>
+				<!-- Укутал в article, но блоки не проходят валидацию, так как w3s требует присутствия заголовка -->
+				<article class="reviews-feedback">
+					<img class="review-avatar" src="#" alt="Аватар" width="76" height="76">
+					<div class="review-item">
+						<p class="review-item-txt">Porro officia cumque sint deleniti nemo facere rem vitae odit
+							inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit.
+							Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+						<span class="review-item-author">Lourens S.</span>
+					</div>
+				</article>
+				<article class="reviews-feedback">
+					<img class="review-avatar" src="#" alt="Аватар" width="76" height="76">
+					<div class="review-item">
+						<p class="review-item-txt">Porro officia cumque sint deleniti nemo facere rem vitae odit
+							inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit.
+							Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+						<span class="review-item-author">Lourens S.</span>
+					</div>
+				</article>
+				<article class="reviews-feedback">
+					<img class="review-avatar" src="#" alt="Аватар" width="76" height="76">
+					<div class="review-item">
+						<p class="review-item-txt">Porro officia cumque sint deleniti nemo facere rem vitae odit
+							inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit.
+							Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+						<span class="review-item-author">Lourens S.</span>
+					</div>
+				</article>
+				<article class="reviews-feedback">
+					<img class="review-avatar" src="#" alt="Аватар" width="76" height="76">
+					<div class="review-item">
+						<p class="review-item-txt">Porro officia cumque sint deleniti nemo facere rem vitae odit
+							inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit.
+							Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+						<span class="review-item-author">Lourens S.</span>
+					</div>
+				</article>
+			</section>
+
+			<section class="price">
+				<h2 class="price-header normal-header-h2">Buy it now</h2>
+				<div class="price-item">
+					<span class="price-item-title">Standart</span>
+					<span class="price-item-cost">$50</span>
+					<ol class="price-item-list">
+						<li>Porro officia cumque sint deleniti;</li>
+						<li>Тemo facere rem vitae odit;</li>
+						<li>Cum odio, iste quia doloribus autem;</li>
+						<li>Aperiam nulla ea neque.</li>
+					</ol>
+					<button class="price-item-btn">buy</button>
+				</div>
+				<div class="price-item">
+					<span class="price-item-title">Premium</span>
+					<span class="price-item-cost">$100</span>
+					<ol class="price-item-list">
+						<li>Porro officia cumque sint deleniti;</li>
+						<li>Тemo facere rem vitae odit;</li>
+						<li>Cum odio, iste quia doloribus autem; 4. Aperiam nulla ea neque.</li>
+						<li>Porro officia cumque sint deleniti;</li>
+						<li>Тemo facere rem vitae odit;</li>
+						<li>Cum odio, iste quia doloribus autem; 8. Aperiam nulla ea neque.</li>
+					</ol>
+					<button class="price-item-btn">buy</button>
+				</div>
+				<div class="price-item">
+					<span class="price-item-title">Lux</span>
+					<span class="price-item-cost">$150</span>
+					<ol class="price-item-list">
+						<li>Porro officia cumque sint deleniti;</li>
+						<li>Тemo facere rem vitae odit;</li>
+						<li>Cum odio, iste quia doloribus autem;</li>
+						<li>Aperiam nulla ea neque.
+						<li>Porro officia cumque sint deleniti;</li>
+						<li>Тemo facere rem vitae odit;</li>
+						<li>Cum odio, iste quia doloribus autem;</li>
+						<li>Aperiam nulla ea neque.
+						<li>Porro officia cumque sint deleniti;</li>
+						<li>Тemo facere rem vitae odit;</li>
+						<li>Cum odio, iste quia doloribus autem;</li>
+						<li>Aperiam nulla ea neque.</li>
+					</ol>
+					<button class="price-item-btn">buy</button>
+				</div>
 			</section>
 
 		</main>
