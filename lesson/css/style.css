@@ -34,7 +34,7 @@
   }
   
   .page-header-list {
-    padding: 0 0 0 30px;
+    padding: 0;
     margin: 0 0 0 0;
     font-size: 20px;
     line-height: 36px;
@@ -43,6 +43,8 @@
   }
   
   .page-header-list-item {
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
     position: relative;
   }
   
@@ -54,7 +56,7 @@
     /* border: 1px solid; */
     position: absolute;
     top: 7px;
-    left: -30px;
+    left: 0;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/1200px-Flat_tick_icon.svg.png');
     background-size: cover;
   }
@@ -344,7 +346,7 @@
   }
   
   .price-item-list {
-    margin:  20px;
+    margin: 20px 0 0 0;
     padding: 0;
     list-style-position: inside;
     font-size: 14px;
@@ -352,12 +354,17 @@
     font-weight: 400;
     color: #ffffff;
   }
+
+  .price-item-list li{
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+  }
   
   .price-item-btn {
     display: block;
     min-width: 260px;
-    margin:  0 auto 20px auto;
-    padding: 13px;
+    margin:  20px auto;
+    padding: 14px 0 14px 0;
     box-sizing: border-box;
     background-color: #fff;
     border: 1px solid #fff;
