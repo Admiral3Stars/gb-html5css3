@@ -32,13 +32,13 @@
 						Nobis facilis fuga, illo&nbsp;at. Natus eos, eligendi illum rerum omnis porro&nbsp;ex, magni,
 						explicabo veniam incidunt in&nbsp;quam sapiente ut&nbsp;ipsum.
 					</p>
-					<!--&shy; работает, а вот hyphens: auto; ни-фи-га. В chrome вообще не пашет, в мозили якобы должно, но не пашет тоже. Хотя стиль не зачёркивается-->
 					<p class="about-product-article-text normal-text">Pariatur iure ab&nbsp;sunt nesciunt, quibusdam
 						odio iste
 						cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi
 						dolores. Sequi itaque, unde per&shy;ferendis nemo debitis dolor.</p>
 				</div>
-				<img class="about-product-img" src="#" alt="ещё одно фото товара" width="430" height="245">
+				<video class="about-product-video" src="videos/gold-words.mp4" width="430" height="245"
+					controls></video>
 			</section>
 			<section class="dignity">
 				<h2 class="dignity-header normal-header-h2">Dignity and pluses product</h2>
@@ -125,7 +125,6 @@
 
 			<section class="reviews">
 				<h2 class="reviews-header normal-header-h2">Reviews</h2>
-				<!-- Укутал в article, но блоки не проходят валидацию, так как w3s требует присутствия заголовка -->
 				<article class="reviews-feedback">
 					<img class="review-avatar" src="#" alt="Аватар" width="76" height="76">
 					<div class="review-item">
@@ -228,7 +227,7 @@
 					<li class="footer-contacts-list-item item-email">psdhtmlcss@mail.ru</li>
 					<li class="footer-contacts-list-item item-phone">80 00 4568 55 55</li>
 				</ul>
-				<!-- Иконки взял из font-awesome (лишние файлы там удалил для препроцессоров less и css), просто решил попробовать. Поэтому иконки немного отличны от макетных. Но можно и макетные сверстать. -->
+				<!-- Иконки взял из font-awesome (лишние файлы там удалил для препроцессоров less и css), просто решил попробовать. Поэтому иконки немного отличны от макетных. Но можно и макетные сверстать. Иконки можно сделать круглыми, через бордер радиус, предварительно их уменьшить. Если нужно переделаю на круглые (но тогда лучше взять иконки без обрамления, которые не -square) -->
 				<div class="page-footer-contacts-social-icons">
 					<a href="#" class="contacts-social-icon-twitter-link"><i class="fa fa-twitter-square"></i></a>
 					<a href="#" class="contacts-social-icon-facebook-link"><i class="fa fa-facebook-square"></i></a>
