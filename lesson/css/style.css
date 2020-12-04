@@ -117,9 +117,7 @@ input[type="submit"], button{
      margin: 0;
   }
 
-  .about-product-img {
-    display: block;
-    background-color: #445161;
+  .about-product-video {
     width: 430px;
     min-height: 245px;
   } 
