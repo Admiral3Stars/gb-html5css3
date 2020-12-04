@@ -3,6 +3,14 @@
   padding: 0;
 } */
 
+textarea{
+  resize: none;
+}
+
+input[type="submit"], button{
+  outline: none;
+}
+
 .container {
     width: 1280px;
     margin: 0 auto;
@@ -53,7 +61,6 @@
     display: block;
     width: 20px;
     height: 20px;
-    /* border: 1px solid; */
     position: absolute;
     top: 7px;
     left: 0;
@@ -388,3 +395,148 @@
     color: #445161;
   }
   
+  .page-footer {
+    width: 100%;
+    padding: 53px 50px 49px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:  #445161;;
+    color: #fff;
+  }
+
+  .page-footer-header {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
+
+  .page-footer-form{
+    display: block;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 45px 0 0;
+  }
+
+  /*
+  Сделал вложенный селектор, чтобы обратиться по атрибуту тайп и сделать стили уникальными для данной формы. Можно обратиться через классы, сделав их не такими банальными
+  */
+  .page-footer-form input[type=text], 
+  .page-footer-form input[type=email], 
+  .page-footer-form textarea,
+  .white-submit
+  {
+    margin: 0 0 21px 0;
+    padding: 10px 14px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #445161;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #445162;
+  }
+
+  .page-footer-form input[type=text], 
+  .page-footer-form input[type=email], 
+  .page-footer-form textarea{
+    width: 100%;
+  }
+
+  .white-submit{
+    margin: 0;
+    min-width: 140px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .page-footer-contacts{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contacts-list{
+  padding: 0;
+  margin: 0 0 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+.footer-contacts-list-item{
+  margin: 0 0 30px 0;
+  padding: 0 0 0 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.item-skype:before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url('../images/icons/skype.png');
+}
+
+.item-icq:before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url('../images/icons/icq.png');
+}
+
+.item-email:before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url('../images/icons/email.png');
+}
+
+.item-phone:before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url('../images/icons/phone.png');
+}
+
+.page-footer-contacts-social-icons a{
+  text-decoration: none;
+  color: white;
+}
+
+.fa{
+  font-size: 60px;
+  margin-right: 5px;
+}
+
+.copy{
+  padding: 4px 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: #445161;
+}
