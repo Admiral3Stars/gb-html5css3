@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="plagins/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>JS Bin</title>
 </head>
@@ -211,9 +212,36 @@
 			</section>
 
 		</main>
-		<footer>
-
+		<footer class="page-footer">
+			<h2 class="page-footer-header normal-header-h2">Contacts</h2>
+			<form class="page-footer-form" action="javascript:alert('Ваша заявка принята. Спасибо за клик ;)')"
+				method="POST">
+				<input class="name" type="text" name="name" placeholder="Your name:">
+				<input class="email" type="email" name="email" placeholder="Your email:">
+				<textarea name="" id="" cols="30" rows="10" placeholder="Your message:"></textarea>
+				<input class="white-submit" type="submit" value="Send">
+			</form>
+			<div class="page-footer-contacts">
+				<ul class="footer-contacts-list">
+					<li class="footer-contacts-list-item item-skype">here_your_login_skype</li>
+					<li class="footer-contacts-list-item item-icq">279679659</li>
+					<li class="footer-contacts-list-item item-email">psdhtmlcss@mail.ru</li>
+					<li class="footer-contacts-list-item item-phone">80 00 4568 55 55</li>
+				</ul>
+				<!-- Иконки взял из font-awesome (лишние файлы там удалил для препроцессоров less и css), просто решил попробовать. Поэтому иконки немного отличны от макетных. Но можно и макетные сверстать. -->
+				<div class="page-footer-contacts-social-icons">
+					<a href="#" class="contacts-social-icon-twitter-link"><i class="fa fa-twitter-square"></i></a>
+					<a href="#" class="contacts-social-icon-facebook-link"><i class="fa fa-facebook-square"></i></a>
+					<a href="#" class="contacts-social-icon-linkedin-link"><i class="fa fa-linkedin-square"></i></a>
+					<a href="#" class="contacts-social-icon-google-plus-link"><i
+							class="fa fa-google-plus-square"></i></a>
+					<a href="#" class="contacts-social-icon-youtube-link"><i class="fa fa-youtube-square"></i></a>
+				</div>
+			</div>
 		</footer>
+		<div class="copy">
+			Copyright © 2014 Product name · PSD HTML CSS
+		</div>
 	</div>
 </body>
 
