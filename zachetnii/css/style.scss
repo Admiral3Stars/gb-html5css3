@@ -28,6 +28,7 @@ $header-line-width: $site-width - ( 376 * 2 );
   height: 56px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -38,6 +39,9 @@ $header-line-width: $site-width - ( 376 * 2 );
   align-items: center;
   text-decoration: none;
   color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .top-line-logo-img{
@@ -75,6 +79,10 @@ $header-line-width: $site-width - ( 376 * 2 );
 
 .top-line-navigation{
   display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .top-line-navigation-menu{
@@ -102,18 +110,73 @@ $header-line-width: $site-width - ( 376 * 2 );
   color: #fff;
 }
 
-.top-line-navigation-card, .top-line-navigation-search{
-  fill: #fff;
+.top-line-navigation-card{
+  height: 24px;
   margin: 0 0 0 28px;
 }
 
-.top-line-navigation-card:hover, .top-line-navigation-search:hover{
+.top-line-navigation-card svg, .top-line-navigation-card:active svg{
+  fill: #fff;
+}
+
+.top-line-navigation-card:hover svg{
   fill: #c7b299;
 }
 
-.top-line-navigation-card:active, .top-line-navigation-search:active{
+.top-line-navigation-search{
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 28px;
+  position: relative;
+}
+
+.navigation-search__lable{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-search__svg {
+  width: 100%;
+  height: 100%;
   fill: #fff;
 }
+
+.navigation-search__lable:hover .navigation-search__svg {
+  fill: #c7b299;
+}
+
+.navigation-search__lable:active .navigation-search__svg {
+  fill: #fff;
+}
+
+.navigation-search_input{
+  width: 0;
+  min-height: 0;
+  padding: 5px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 40px;
+  left: -119px;
+  font-size: 16px;
+  color: #fff;
+  text-transform: capitalize;
+  @include sans-serif('Montserrat');
+}
+
+.navigation-search_input:focus {
+    width: 150px;
+    min-height: 20px;
+    transition: width 1s ease;
+    border: 2px solid #fff;
+  }
+  
+  .navigation-search_input:focus ~ .navigation-search__lable>.navigation-search__svg {
+    fill: #c7b299;
+  }
 
 .header-content{
   margin: 285px 0 0 0;
