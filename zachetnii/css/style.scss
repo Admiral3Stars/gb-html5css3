@@ -1,14 +1,16 @@
-$site-width: 1280px;
-$header-line-width: 1170px;
+@import "fonts.scss";
 
-.rale{
-  font-family: 'Raleway', sans-serif;
+@mixin sans-serif($font){
+  font-family: $font, 'Arial', sans-serif;
 }
+
+$site-width: 1920px;
+$header-line-width: $site-width - ( 376 * 2 );
 
 .conteiner {
   width: $site-width;
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  @include sans-serif('Montserrat');
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
@@ -19,9 +21,6 @@ $header-line-width: 1170px;
   padding: 40px;
   box-sizing: border-box;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .header-top-line{
@@ -52,11 +51,18 @@ $header-line-width: 1170px;
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -0.04em;
-  font-family: 'Raleway', sans-serif;
+  @include sans-serif('Raleway');
 }
 
 .top-line-navigation{
   display: flex;
+}
+
+.top-line-navigation-menu{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 35px;
 }
 
 .top-line-navigation-menu-item{
@@ -77,12 +83,7 @@ $header-line-width: 1170px;
   color: #fff;
 }
 
-.top-line-navigation-card{
-  fill: #fff;
-  margin: 0 0 0 63px;
-}
-
-.top-line-navigation-search{
+.top-line-navigation-card, .top-line-navigation-search{
   fill: #fff;
   margin: 0 0 0 28px;
 }
@@ -124,6 +125,7 @@ $header-line-width: 1170px;
   font-size: 36px;
   line-height: 1.2;
   font-weight: 500;
+  @include sans-serif('Raleway');
 }
 
 .header-content-h1{
@@ -131,6 +133,7 @@ $header-line-width: 1170px;
   font-size: 52px;
   line-height: 1.2;
   font-weight: 800;
+  @include sans-serif('Raleway');
 }
 
 .header-content-button{
@@ -145,8 +148,13 @@ $header-line-width: 1170px;
   font-size: 14px;
   line-height: 23px;
   font-weight: 800;
+  @include sans-serif('Raleway');
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.header-content-text{
+  margin: 19px 0 0 0;
 }
 
 .header-content-button:hover{
@@ -160,9 +168,9 @@ $header-line-width: 1170px;
 }
 
 .site-header-navigation{
-  margin: 100px 0 0 0;
+  margin: 327px 0 0 0;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 .site-header-navigation-marker{
@@ -179,7 +187,7 @@ $header-line-width: 1170px;
 .site-header-navigation-marker:hover{
   background-color: black;
   width: 11px;
-  height: 11px; /* Не стал делать увеличенные, чтобы не оборачивать в дополнительный DIV. В противном случае они будут прыгать по горизонтали */
+  height: 11px;
   border: 2px solid #d3c1ad;
 }
 
