@@ -35,7 +35,8 @@ $header-line-width: $site-width - ( 376 * 2 );
 }
 
 .site-header{
-  background: url(../img/bg_photo_11949.png) 100% no-repeat;
+  background-image: url(../img/bg_photo_11949.png);
+  background-size: cover;
   padding: 40px;
   box-sizing: border-box;
   color: #fff;
@@ -196,37 +197,103 @@ $header-line-width: $site-width - ( 376 * 2 );
     fill: #c7b299;
   }
 
-.header-content{
+.header-carousel{
   margin: 285px 0 0 0;
-  text-align: center;
-  padding: 0 300px;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-left, .carousel-right{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 40px;
   position: relative;
 }
 
-.header-content:before{
+.carousel-left::after,
+.carousel-right::after{
   content: "";
+  display: block;
+  width: 52px;
+  height: 0px;
+  border: 2px solid #fff;
   position: absolute;
-  background-image: url(../img/left_11970.png);
-  background-size: cover;
-  top: 100px;
-  left: 0px;
-  width: 40px;
-  height: 73px;
+  top: 0px;
+  left: 0;
   opacity: 0.5;
 }
 
-.header-content:after{
+.carousel-left::after,
+.carousel-right::before{
+  transform: rotate(-45deg);
+}
+
+.carousel-left::before,
+.carousel-right::before{
   content: "";
+  display: block;
+  width: 52px;
+  height: 0px;
+  border: 2px solid #fff;
   position: absolute;
-  background-image: url(../img/right_11969.png);
-  background-size: cover;
-  top: 100px;
-  right: 0px;
-  width: 40px;
-  height: 73px;
+  top: 38px;
+  left: 0;
   opacity: 0.5;
 }
+
+.carousel-left::before,
+.carousel-right::after{
+  transform: rotate(45deg);
+}
+
+.carousel-left:hover::before,
+.carousel-left:hover::after,
+.carousel-right:hover::before,
+.carousel-right:hover::after{
+  border: 2px solid #c7b299;
+}
+
+.carousel-left:active::before,
+.carousel-left:active::after,
+.carousel-right:active::before,
+.carousel-right:active::after{
+  border: 2px solid #fff;
+} 
+
+.header-content{
+  // margin: 285px 0 0 0;
+  text-align: center;
+  width: 600px;
+  margin: 0 400px; // Подгоню по pixel в pixel
+  box-sizing: border-box;
+  // position: relative;
+}
+
+// .header-content:before{
+//   content: "";
+//   position: absolute;
+//   background-image: url(../img/left_11970.png);
+//   background-size: cover;
+//   top: 100px;
+//   left: 0px;
+//   width: 40px;
+//   height: 73px;
+//   opacity: 0.5;
+// }
+
+// .header-content:after{
+//   content: "";
+//   position: absolute;
+//   background-image: url(../img/right_11969.png);
+//   background-size: cover;
+//   top: 100px;
+//   right: 0px;
+//   width: 40px;
+//   height: 73px;
+//   opacity: 0.5;
+// }
 
 .header-content-preview{
   display: block;
@@ -246,19 +313,23 @@ $header-line-width: $site-width - ( 376 * 2 );
 
 .header-content-button{
   display: inline-block;
-  margin: 52px 0 0 0;
-  padding: 21px 37px;
+  border: none;
+  margin: 52px auto 0 auto;
+  padding: 14px 37px;
   box-sizing: border-box;
   background-color: #998675;
-  color: white;
   border-radius: 3px;
+  color: #fff;
+  border-bottom: 3px solid #736357;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   font-size: 14px;
   line-height: 23px;
   font-weight: 800;
   @include sans-serif('Raleway');
-  text-transform: uppercase;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .header-content-text{
@@ -430,6 +501,8 @@ $header-line-width: $site-width - ( 376 * 2 );
   border-radius: 3px;
   background-color: #998675;
   box-shadow: inset 0px 3px 0px 0px rgba(115, 99, 87, 0.004);
+  cursor: pointer;
+  outline: none;
 }
 
 .advertising-button-txt{
@@ -442,3 +515,18 @@ $header-line-width: $site-width - ( 376 * 2 );
   @include sans-serif('Raleway');
 }
 
+.advertising-button:hover{
+  background-color: #fff;
+}
+
+.advertising-button:hover .advertising-button-txt{
+  color: #998675;
+}
+
+.advertising-button:active{
+  background-color: #998675;
+}
+
+.advertising-button:active .advertising-button-txt{
+  color: #fff;
+}
