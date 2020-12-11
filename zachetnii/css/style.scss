@@ -54,6 +54,25 @@ $header-line-width: $site-width - ( 376 * 2 );
   @include sans-serif('Raleway');
 }
 
+.top-line-logo:hover{
+  .top-line-logo-img{
+    fill: #c7b299;
+  }
+  .top-line-logo-text{
+    color: #c7b299;
+  }
+}
+
+.top-line-logo:active{
+  .top-line-logo-img{
+    fill: #fff;
+  }
+  .top-line-logo-text{
+    color: #fff;
+  }
+}
+
+
 .top-line-navigation{
   display: flex;
 }
@@ -86,6 +105,14 @@ $header-line-width: $site-width - ( 376 * 2 );
 .top-line-navigation-card, .top-line-navigation-search{
   fill: #fff;
   margin: 0 0 0 28px;
+}
+
+.top-line-navigation-card:hover, .top-line-navigation-search:hover{
+  fill: #c7b299;
+}
+
+.top-line-navigation-card:active, .top-line-navigation-search:active{
+  fill: #fff;
 }
 
 .header-content{
@@ -158,13 +185,13 @@ $header-line-width: $site-width - ( 376 * 2 );
 }
 
 .header-content-button:hover{
-  background-color: #998675;
-  color: white;
+  background-color: #fff;
+  color: #998675;
 }
 
 .header-content-button:active{
-  background-color: white;
-  color: #998675;
+  background-color: #998675;
+  color: #fff;
 }
 
 .site-header-navigation{
