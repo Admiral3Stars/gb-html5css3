@@ -507,6 +507,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -636,6 +638,7 @@
 }
 
 .site-header-navigation {
+  width: 100%;
   margin: 327px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1714,5 +1717,59 @@
 
 .footer-fix-link::before {
   color: #555555;
+}
+
+@media (max-width: 576px) {
+  .conteiner {
+    width: 100%;
+  }
+  .header-top-line {
+    width: 100%;
+    height: auto;
+  }
+  .header-carousel {
+    display: none;
+  }
+  .top-line-navigation {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top-line-navigation-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .top-line-navigation-card,
+  .top-line-navigation-search {
+    display: none;
+  }
+  .portfolio-multi_photo {
+    width: 100%;
+    min-height: 175px;
+    background-image: url(../img/portfolio_center.jpg), url(../img/portfolio_left.jpg), url(../img/portfolio_right.jpg);
+    background-size: 50%, 40%, 40%;
+  }
+  .advertising-wrapper {
+    width: 330px;
+    margin: 0 10px 0 0;
+  }
+  .latest {
+    margin: 60px 0 0 0;
+    padding: 0;
+  }
+  .latest-images {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .latest-images-link {
+    margin: 30px 0 0 0;
+  }
+  .video {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
