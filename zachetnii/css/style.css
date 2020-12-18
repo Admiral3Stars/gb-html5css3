@@ -312,8 +312,9 @@
 }
 
 .site-header {
-  background-image: url(../img/bg_photo_11949.png);
+  background: rgba(0, 0, 0, 0.65) url(../img/header-bground.jpg);
   background-size: cover;
+  background-blend-mode: darken;
   padding: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -838,7 +839,7 @@
   color: #fff;
 }
 
-.lastest {
+.latest {
   margin: 80px 0 0 0;
   padding: 80px;
   -webkit-box-sizing: border-box;
@@ -846,7 +847,7 @@
   background-color: #fff;
 }
 
-.lastest-buttons {
+.latest-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -858,7 +859,7 @@
   margin: 40px 0 10px 0;
 }
 
-.lastest-buttons-item {
+.latest-buttons-item {
   padding: 10px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -876,17 +877,17 @@
   text-transform: capitalize;
 }
 
-.lastest-buttons-item:hover {
+.latest-buttons-item:hover {
   background-color: #fff;
   color: #998675;
 }
 
-.lastest-buttons-item:active {
+.latest-buttons-item:active {
   background-color: #998675;
   color: #fff;
 }
 
-.lastest-images {
+.latest-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,24 +897,79 @@
   margin: 0 auto;
 }
 
-.lastest-images-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.latest-images-link {
+  position: relative;
+  background-color: #fbfaf8;
   text-decoration: none;
   margin: 30px 30px 0 0;
+  cursor: auto;
 }
 
-.lastest-images-link:nth-child(3n) {
+.latest-images-link:nth-child(3n) {
   margin: 30px 0 0 0;
 }
 
 .images-link-img {
-  margin: 0 0 30px 0;
+  display: block;
+  position: relative;
+}
+
+.images-link-buttons {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 370px;
+  height: 237px;
+}
+
+.images-link-buttons-link,
+.images-link-buttons-search {
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  outline: none;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+}
+
+.images-link-buttons-link {
+  margin: 0 28px 0 0;
+}
+
+.images-link-buttons-link,
+.images-link-buttons-link:active {
+  background-image: url(../img/icons/latest-link.svg);
+}
+
+.images-link-buttons-search,
+.images-link-buttons-search:active {
+  background-image: url(../img/icons/latest-search.svg);
+}
+
+.images-link-buttons-link:hover {
+  background-image: url(../img/icons/latest-link-grey.svg);
+}
+
+.images-link-buttons-search:hover {
+  background-image: url(../img/icons/latest-search-grey.svg);
+}
+
+.latest-images-link-content {
+  position: relative;
+  padding: 30px 30px 27px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.latest-images-link-content::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 19px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #fbfaf8;
 }
 
 .images-link-header {
@@ -922,18 +978,49 @@
   font-weight: 500;
   color: #c7b299;
   font-family: "Raleway", "Arial", sans-serif;
-  margin: 0 28px;
+  margin: 0 0 14px 0;
 }
 
 .images-link-text {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 300;
   color: #d1d1d1;
-  margin: 14px 28px 0 28px;
 }
 
-.lastest-button {
+.latest-images-link:hover {
+  background-color: #362f2d;
+}
+
+.latest-images-link:hover .images-link-img {
+  background: #000;
+  opacity: 0.6;
+}
+
+.latest-images-link:hover .images-link-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.latest-images-link:hover .latest-images-link-content::before {
+  border-bottom: 15px solid #362f2d;
+}
+
+.latest-images-link:hover .images-link-header {
+  color: #ffffff;
+}
+
+.latest-images-link:hover .images-link-text {
+  color: #c7b299;
+}
+
+.latest-button {
   display: block;
   padding: 10px 25px;
   -webkit-box-sizing: border-box;
@@ -952,12 +1039,12 @@
   color: #ffffff;
 }
 
-.lastest-button:hover {
+.latest-button:hover {
   background-color: #fff;
   color: #998675;
 }
 
-.lastest-button:active {
+.latest-button:active {
   background-color: #998675;
   color: #fff;
 }
@@ -1178,16 +1265,44 @@
   line-height: 22px;
   font-weight: 300;
   color: #8c8c8c;
-  margin: 19px 0 0 0;
+  margin: 19px 0 27px 0;
 }
 
 .posts-cart-link {
-  display: block;
+  position: relative;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 300;
+  text-decoration: none;
   color: #c7b299;
-  margin: 27px 0 0 0;
+  text-transform: capitalize;
+  padding: 0 15px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.posts-cart-link::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  border: 5px solid transparent;
+  border-left: 5px solid #c7b299;
+}
+
+.posts-cart-link:hover {
+  color: #d1d1d1;
+}
+
+.posts-cart-link:hover::after {
+  border-left: 5px solid #d1d1d1;
+}
+
+.posts-cart-link:active {
+  color: #c7b299;
+}
+
+.posts-cart-link:active::after {
+  border-left: 5px solid #c7b299;
 }
 
 .posts-cart-calendar {
@@ -1203,6 +1318,31 @@
   top: 20px;
   left: 20px;
   border-radius: 3px;
+}
+
+.posts-cart:hover {
+  background-color: #362f2d;
+}
+
+.posts-cart:hover .posts-cart-img {
+  background: #000;
+  opacity: 0.6;
+}
+
+.posts-cart:hover .posts-cart-header {
+  color: #c7b299;
+}
+
+.posts-cart:hover .posts-cart-text {
+  color: #fff;
+}
+
+.posts-cart:hover .cart-calendar-day {
+  background-color: #c7b299;
+}
+
+.posts-cart:hover .cart-calendar-month {
+  background-color: #a48d72;
 }
 
 .cart-calendar-day {
@@ -1289,8 +1429,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(../img/partners-bground.jpg);
+  background: rgba(0, 0, 0, 0.65) url(../img/partners-bground.jpg);
   background-size: cover;
+  background-blend-mode: darken;
   padding: 140px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
