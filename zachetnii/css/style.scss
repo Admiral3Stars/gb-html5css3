@@ -7,6 +7,13 @@
 $site-width: 1920px;
 $header-line-width: $site-width - ( 376 * 2 );
 
+.transition, .transition:hover{
+  transition: 400ms;
+}
+.transition:active{
+  transition: 100ms;
+}
+
 .standart-h3{
   font-size: 30px;
   line-height: 1.2;
@@ -360,26 +367,23 @@ $header-line-width: $site-width - ( 376 * 2 );
 .site-header-navigation-marker{
   display: block;
   text-decoration: none;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   opacity: 0.5;
   background-color: #ffffff;
+  border: 2px solid transparent;
   border-radius: 50%;
   margin: 0 10px 0 0;
 }
 
 .site-header-navigation-marker:hover{
   background-color: black;
-  width: 11px;
-  height: 11px;
   border: 2px solid #d3c1ad;
 }
 
 .site-header-navigation-marker:active{
-  width: 15px;
-  height: 15px;
+  border: 2px solid transparent;
   background-color: #ffffff;
-  border: none;
 }
 
 .advantage{
@@ -771,6 +775,11 @@ $header-line-width: $site-width - ( 376 * 2 );
 .statistics-features__svg{
   fill: #c7b299;
   margin: 0 0 30px 0;
+  transition: 500ms;
+}
+
+.statistics-features__svg:hover{
+  transform: scale(1.2);
 }
 
 .statistics-features-title{
@@ -931,14 +940,25 @@ $header-line-width: $site-width - ( 376 * 2 );
 .footer-content{
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: #191919;
   padding: 80px;
   box-sizing: border-box;
 }
 
-.footer-content-div{
+.footer-content-about, .footer-content-div{
   max-width: 270px;
+  margin: 0 30px 0 0;
+}
+
+.footer-content-div{
+  padding: 28px 0 0 0;
+  box-sizing: border-box;
+}
+
+.footer-content-div:last-child{
+  margin: 0;
 }
 
 .footer-content-about-logo{
@@ -985,6 +1005,7 @@ $header-line-width: $site-width - ( 376 * 2 );
 }
 
 .footer-content-about-text{
+  margin: 29px 0 33px 0;
   font-size: 14px;
   color: #555555;
 }
@@ -999,7 +1020,6 @@ $header-line-width: $site-width - ( 376 * 2 );
   text-decoration: none;
   color: #d1d1d1;
   text-transform: capitalize;
-  transition: 500ms;
 }
 
 .footer-content-about-button::after{
@@ -1013,7 +1033,6 @@ $header-line-width: $site-width - ( 376 * 2 );
 
 .footer-content-about-button:hover{
   color: #c7b299;
-  transition: 500ms;
 }
 
 .footer-content-about-button:hover::after{
@@ -1022,17 +1041,99 @@ $header-line-width: $site-width - ( 376 * 2 );
 
 .footer-content-about-button:active{
   color: #d1d1d1;
-  transition: 1ms;
 }
 
 .footer-content-about-button:active::after{
   border-left: 5px solid #d1d1d1;
 }
 
+.footer-content-div-header{
+  display: block;
+  margin: 0 0 30px 0;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  @include sans-serif('Raleway');
+}
 
+.footer-content-recent-article{
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  text-decoration: none;
+}
 
+.footer-hr-bottom:not(:last-child)::after{
+  content: "";
+  display: block;
+  margin: 23px 0;
+  height: 2px;
+  width: 100%;
+  background-color: #252525;
+}
 
+.footer-content-recent-article:hover{
+  color: #c7b299;
+}
 
+.footer-content-recent-article:active{
+  color: #555555;
+}
+
+.footer-content-recent-article-time{
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #363636;
+}
+
+.footer-content-recent-article:hover .footer-content-recent-article-time{
+  color: #ffffff;
+}
+
+.footer-content-recent-article:active .footer-content-recent-article-time{
+  color: #363636;
+}
+
+.twitter-item-text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+}
+
+.twitter-item-time{
+  font-size: 12px;
+  line-height: 20px;
+  color: #363636;
+}
+
+.twitter-style{
+  color: #00bff3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.twitter-link{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-content-widget{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-content-widget-header{
+  width: 100%;
+}
+
+.footer-content-widget-img{
+  margin: 0 0 10px 0;
+}
 
 .footer-copiright{
   background-color: #111111;
@@ -1052,18 +1153,15 @@ $header-line-width: $site-width - ( 376 * 2 );
 .footer-copiright-link{
   text-decoration: none;
   color: #555555;
-  transition: 500ms;
   cursor: pointer;
 }
 
 .footer-copiright-link:hover{
   color: #c7b299;
-  transition: 500ms;
 }
 
 .footer-copiright-link:active{
   color: #555555;
-  transition: 1ms;
 }
 
 .footer-copiright-link::before{
