@@ -397,6 +397,10 @@
   outline: none;
 }
 
+#mobile-menu-checkbox {
+  display: none;
+}
+
 .top-line-navigation-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1874,7 +1878,7 @@
             justify-content: space-between;
   }
   .advantage-features {
-    width: 250px;
+    width: 49%;
     margin: 10px 0 0 0;
   }
   .portfolio {
@@ -1992,6 +1996,7 @@
   }
   .footer-content-about {
     padding: 70px 0;
+    max-width: 100%;
   }
   .footer-content-about {
     padding: 0;
@@ -1999,6 +2004,7 @@
   }
   .footer-content-div {
     margin: 10px 0 0 0;
+    max-width: 100%;
   }
   .footer-copiright {
     padding: 70px 0 30px 0;

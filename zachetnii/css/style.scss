@@ -112,9 +112,9 @@ $header-line-width: $site-width - ( 376 * 2 );
   outline: none;
 }
 
-// .mobile, #mobile-menu-checkbox{
-//   display: none;
-// }
+#mobile-menu-checkbox{
+  display: none;
+}
 
 .top-line-navigation-menu{
   display: flex;
@@ -1481,7 +1481,7 @@ $header-line-width: $site-width - ( 376 * 2 );
   }
 
   .advantage-features{
-    width: 250px;
+    width: 49%;
     margin: 10px 0 0 0;
   }
 
@@ -1616,6 +1616,7 @@ $header-line-width: $site-width - ( 376 * 2 );
 
   .footer-content-about{
     padding: 70px 0;
+    max-width: 100%;
   }
 
   .footer-content-about{
@@ -1625,6 +1626,7 @@ $header-line-width: $site-width - ( 376 * 2 );
 
   .footer-content-div{
     margin: 10px 0 0 0;
+    max-width: 100%;
   }
 
   .footer-copiright{
