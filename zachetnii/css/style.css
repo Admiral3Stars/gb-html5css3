@@ -957,13 +957,11 @@
   margin: 0 28px 0 0;
 }
 
-.images-link-buttons-link,
-.images-link-buttons-link:active {
+.images-link-buttons-link {
   background-image: url(../img/icons/latest-link.svg);
 }
 
-.images-link-buttons-search,
-.images-link-buttons-search:active {
+.images-link-buttons-search {
   background-image: url(../img/icons/latest-search.svg);
 }
 
@@ -973,6 +971,14 @@
 
 .images-link-buttons-search:hover {
   background-image: url(../img/icons/latest-search-grey.svg);
+}
+
+.images-link-buttons-link:active {
+  background-image: url(../img/icons/latest-link.svg);
+}
+
+.images-link-buttons-search:active {
+  background-image: url(../img/icons/latest-search.svg);
 }
 
 .latest-images-link-content {
